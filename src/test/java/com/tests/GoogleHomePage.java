@@ -31,7 +31,7 @@ public class GoogleHomePage {
     public void setup() {
         log.info("****************************** Starting test cases execution  *****************************************");
 
-        System.setProperty("webdriver.chrome.driver", "src/main/java/friday/qa/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/vishnudeep.jayam/Drivers/chromedriver");
         driver = new ChromeDriver();
         log.info("launching chrome broswer");
         driver.manage().window().maximize();
@@ -48,29 +48,29 @@ public class GoogleHomePage {
 
 
     @Test(priority = 1)
-    public void googleHomePageTest() {
-        log.info("****************************** starting test case *****************************************");
-        log.info("****************************** googleHomePageTest *****************************************");
+    public void VerifyGoogleHomePageTitle() {
+        log.info("****************************** starting first test case *****************************************");
+        log.info("****************************** VerifyGoogleHomePageTitle *****************************************");
         String title = driver.getTitle();
         System.out.println(title);
         log.info("Google page title is--->" + title);
-        Assert.assertEquals(title, "google");
+        Assert.assertEquals(title, "Google");
 
-        log.info("****************************** ending test case *****************************************");
-        log.info("****************************** googleHomePageTest *****************************************");
+        log.info("****************************** ending first test case *****************************************");
+        log.info("****************************** VerifyGoogleHomePageTitle *****************************************");
 
     }
 
     @Test(priority = 2)
-    public void googleInputSearchBarTest() {
-        log.info("****************************** starting test case *****************************************");
-        log.info("****************************** googleInputSearchBarTest *****************************************");
+    public void GoogleInputSearchBarTest() {
+        log.info("****************************** starting second test case *****************************************");
+        log.info("****************************** GoogleInputSearchBarTest *****************************************");
 
         boolean b = driver.findElement(By.name("q")).isDisplayed();
         Assert.assertTrue(b);
 
-        log.info("****************************** ending test case *****************************************");
-        log.info("****************************** googleInputSearchBarTest *****************************************");
+        log.info("****************************** ending second test case *****************************************");
+        log.info("****************************** GoogleInputSearchBarTest *****************************************");
 
     }
 
