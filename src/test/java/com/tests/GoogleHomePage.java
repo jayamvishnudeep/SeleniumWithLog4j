@@ -31,7 +31,7 @@ public class GoogleHomePage {
     public void setup() {
         log.info("****************************** Starting test cases execution  *****************************************");
 
-        System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/java/friday/qa/drivers/chromedriver");
         driver = new ChromeDriver();
         log.info("launching chrome broswer");
         driver.manage().window().maximize();
